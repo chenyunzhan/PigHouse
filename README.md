@@ -11,6 +11,8 @@
 
  <img src="https://raw.githubusercontent.com/chenyunzhan/PigHouse/master/PigHouse/src/main/resources/doc_images/WechatIMG8.jpeg" alt="图片名称"/>
  
+  <img src="https://raw.githubusercontent.com/chenyunzhan/PigHouse/master/PigHouse/src/main/resources/doc_images/WechatIMG11.jpeg" alt="图片名称"/>
+ 
 git仓库地址为：https://github.com/chenyunzhan/PigHouse.git
 
  <img src="https://raw.githubusercontent.com/chenyunzhan/PigHouse/master/PigHouse/src/main/resources/doc_images/WechatIMG9.jpeg" alt="图片名称"/>
