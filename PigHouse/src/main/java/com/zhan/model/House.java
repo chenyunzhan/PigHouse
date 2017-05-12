@@ -14,7 +14,7 @@ public class House {
     
     
 	private String name;
-	private String adress;
+	private String address;
 	private String longitude;
 	private String latitude;
 	private String phone;
@@ -25,6 +25,8 @@ public class House {
 	private String type;
 	private String structure;
 	private String images;
+	private String area;
+	private String price;
 	private String room0;
 	private String room1;
 	private String room2;
@@ -56,11 +58,18 @@ public class House {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	public String getArea() {
+		return area;
+	}
+	public void setArea(String area) {
+		this.area = area;
 	}
 	public String getLongitude() {
 		return longitude;
@@ -122,6 +131,12 @@ public class House {
 	}
 	public void setImages(String images) {
 		this.images = images;
+	}	
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
 	}
 	public String getRoom0() {
 		return room0;
