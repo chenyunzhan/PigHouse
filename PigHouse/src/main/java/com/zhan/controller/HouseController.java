@@ -24,4 +24,7 @@ public class HouseController {
 		// This returns a JSON or XML with the users
 		return houseRepository.findAll();
 	}
+	
+	
+	
 }
