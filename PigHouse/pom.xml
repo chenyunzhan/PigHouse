@@ -50,6 +50,19 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        
+        
+        
+        <!--  阿里大于JAR-->
+     <dependency>
+         <groupId>my-jar</groupId>   <!--  自己随便取-->
+         <artifactId>my-jar</artifactId> <!-- 自己随便取-->
+         <version>1.0</version><!-- 自己随便取-->
+         <scope>system</scope>
+         <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/taobao-sdk-java-auto_1455552377940-20160607.jar</systemPath>
+     </dependency>
+        
+        
 	</dependencies>
 
 	<build>
