@@ -53,16 +53,29 @@
         
         
         
-        <!--  阿里大于JAR-->
-     <dependency>
-         <groupId>my-jar</groupId>   <!--  自己随便取-->
-         <artifactId>my-jar</artifactId> <!-- 自己随便取-->
-         <version>1.0</version><!-- 自己随便取-->
-         <scope>system</scope>
-         <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/taobao-sdk-java-auto_1455552377940-20160607.jar</systemPath>
-     </dependency>
-        
-        
+      	  <!--  阿里大于JAR-->
+	     <dependency>
+	         <groupId>my-jar</groupId>   <!--  自己随便取-->
+	         <artifactId>my-jar</artifactId> <!-- 自己随便取-->
+	         <version>1.0</version><!-- 自己随便取-->
+	         <scope>system</scope>
+	         <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/taobao-sdk-java-auto_1455552377940-20160607.jar</systemPath>
+	     </dependency>
+	     
+	     <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		    <version>1.10</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>
