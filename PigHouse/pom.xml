@@ -52,34 +52,52 @@
         </dependency>
         
         
+       
+        <dependency>
+		    <groupId>my-jar</groupId>
+		    <artifactId>my-jar</artifactId>
+		    <version>1.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>my-jar</groupId>
+		    <artifactId>my-jar-logging</artifactId>
+		    <version>1.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>my-jar</groupId>
+		    <artifactId>my-jar-alipay</artifactId>
+		    <version>1.0</version>
+		</dependency>
         
-      	  <!--  阿里大于JAR-->
+	     <!-- 
+        
 	     <dependency>
-	         <groupId>my-jar</groupId>   <!--  自己随便取-->
-	         <artifactId>my-jar</artifactId> <!-- 自己随便取-->
-	         <version>1.0</version><!-- 自己随便取-->
+	         <groupId>my-jar</groupId>   
+	         <artifactId>my-jar</artifactId>
+	         <version>1.0</version>
 	         <scope>system</scope>
 	         <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/taobao-sdk-java-auto_1455552377940-20160607.jar</systemPath>
 	     </dependency>
 	     
 	     
 	     <dependency>
-	         <groupId>my-jar-alipay</groupId>   <!--  自己随便取-->
-	         <artifactId>my-jar</artifactId> <!-- 自己随便取-->
-	         <version>1.0</version><!-- 自己随便取-->
+	         <groupId>my-jar-alipay</groupId>
+	         <artifactId>my-jar</artifactId>
+	         <version>1.0</version>
 	         <scope>system</scope>
 	         <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/alipay-sdk-java20170511115337.jar</systemPath>
 	     </dependency>	     
 	     
 	     
 	     <dependency>
-	         <groupId>my-jar-logging</groupId>   <!--  自己随便取-->
-	         <artifactId>my-jar</artifactId> <!-- 自己随便取-->
-	         <version>1.0</version><!-- 自己随便取-->
+	         <groupId>my-jar-logging</groupId>
+	         <artifactId>my-jar</artifactId>
+	         <version>1.0</version>
 	         <scope>system</scope>
 	         <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/commons-logging-1.1.1.jar</systemPath>
 	     </dependency>	
-	     <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec
 		<dependency>
 		    <groupId>commons-codec</groupId>
 		    <artifactId>commons-codec</artifactId>
@@ -103,6 +121,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
+	
 </project>
