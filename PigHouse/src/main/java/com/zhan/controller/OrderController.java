@@ -31,15 +31,6 @@ public class OrderController {
 
 	
 	
-	
-	
-	
-//	public static String APP_PRIVATE_KEY = "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALZd3shiMSHtQsOr62Yp/r4VyxecidHB40rd+eumDl3cEbqhMZ5vQ4+nos+CcTPz06x6sBopOeVGWUPfhjYFPFlbJpcj8p5r8KyPa3T+qhngzHl6ADKO9I3raqnCU0VDCnL1wzNpKpGJNvvSpf1rzqP7EItRbBn51kkJnD5kAuWRAgMBAAECgYA0d4dL8WwfTaqCryiXiQeAWrbGgUPpdDXXaUuo72p8uH7lSdEDuxEd+GXP+8Bj6QeCPP4DWM8OVpICBAIR8qmss0RQPmXloziksy7Yzy069YAiwDGfV0TSxKxm25wvjm5d9HrHlL/Pu3Ykg5LDclvfM3vNKsiPHfJtcnFOzWa7vQJBANtG3xJCoUTPobQBQ2L5qGaGvOJUzrJO5Mtv+1yAyvTl1oRyNMSnN27XA+Gt6cLwKxyI/evoq+H231GWMX38kucCQQDU6ImOoy9cL3LxaowBaOqM0VXH2ar3u0ntfxtlag1vH5GVN+csgvcbcv2bXENvvriHRKXsOyjQo4gexDJ4iyzHAkAhgVzIj4HQ3+EXfjHrx7YhpGjsNIU43bE8HKpN4igg75Wtuz2w5tQjjZs8OrTDYqtTuuMBzxWke3J4Jvj9BUD1AkEAlCmK6JdJMwbWH4i9C5Ief4aCAoTIhINya/Mjdoy58pXucwAnQQOWwSRhtkcbqtz3fzLXoLB+s8rJxFdWpCp+KwJBANkgmlGEEKn4ocYGWEWlMi2FBMNunrQZ+MIpAy5+fHrxTozottKBvDVxJ+tCldQZ2w8xYY+cSBbKRrzT4SEIaCo=";
-//	public static String ALIPAY_PUBLIC_KEY = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2Xd7IYjEh7ULDq+tmKf6+FcsXnInRweNK3fnrpg5d3BG6oTGeb0OPp6LPgnEz89OserAaKTnlRllD34Y2BTxZWyaXI/Kea/Csj2t0/qoZ4Mx5egAyjvSN62qpwlNFQwpy9cMzaSqRiTb70qX9a86j+xCLUWwZ+dZJCZw+ZALlkQIDAQAB";
-
-	
-	
-	
 	@Autowired
 	private OrderRepository orderRepository;
 	
@@ -60,34 +51,6 @@ public class OrderController {
 		order.setSubject("押金支付");
 		orderRepository.save(order);
 		
-		
-		
-		
-		//实例化客户端
-		AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do", APP_ID, APP_PRIVATE_KEY, "json", CHARSET, ALIPAY_PUBLIC_KEY, "RSA2");
-		//实例化具体API对应的request类,类名称和接口名称对应,当前调用接口名称：alipay.trade.app.pay
-		AlipayTradeAppPayRequest request = new AlipayTradeAppPayRequest();
-		//SDK已经封装掉了公共参数，这里只需要传入业务参数。以下方法为sdk的model入参方式(model和biz_content同时存在的情况下取biz_content)。
-		AlipayTradeAppPayModel model = new AlipayTradeAppPayModel();
-		model.setBody("111");
-		model.setSubject("111");
-		model.setOutTradeNo("1111");
-		model.setTimeoutExpress("30m");
-		model.setTotalAmount("0.01");
-		model.setProductCode("QUICK_MSECURITY_PAY");
-		request.setBizModel(model);
-		request.setNotifyUrl("http://www.baidu.com/");
-		try {
-		        //这里和普通的接口调用不同，使用的是sdkExecute
-		        AlipayTradeAppPayResponse response = alipayClient.sdkExecute(request);
-		        String result = "{\"orderString\":\""+response.getBody()+"\"}";
-		        return result;//就是orderString 可以直接给客户端请求，无需再做处理。		   
-		    } catch (AlipayApiException e) {
-		        e.printStackTrace();
-		}
-		
-		
-		/*
 		
 		//实例化客户端
 		AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do", APP_ID, APP_PRIVATE_KEY, "json", CHARSET, ALIPAY_PUBLIC_KEY, "RSA2");
@@ -111,7 +74,6 @@ public class OrderController {
 		    } catch (AlipayApiException e) {
 		        e.printStackTrace();
 		}
-		*/
 		
 		return "{\"error\":\"签名失败\"}";
 	}
