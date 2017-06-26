@@ -1,9 +1,11 @@
-mvn install:install-file 
--Dfile=C:\Users\ZHAN\Documents\workspace-sts-3.8.4.RELEASE\maven.1496633004458\PigHouse\src\main\webapp\WEB-INF\lib\alipay-sdk-java20170511115337.jar
--DgroupId=my-jar 
--DartifactId=my-jar 
--Dversion=1.0 
--Dpackaging=jar
+mvn install:install-file -Dfile=C:\Users\ZHAN\Documents\workspace-sts-3.8.4.RELEASE\maven.1496633004458\PigHouse\src\main\webapp\WEB-INF\lib\alipay-sdk-java20170511115337.jar -DgroupId=my-jar -DartifactId=my-jar -Dversion=1.0 -Dpackaging=jar
+
+
+mvn install:install-file -DgroupId=my-jar -DartifactId=my-jar -Dversion=1.0 -Dpackaging=jar -Dfile=/Users/zhan/Desktop/my-jar-1.0.jar
+
+mvn install:install-file -DgroupId=my-jar -DartifactId=my-jar-alipay -Dversion=1.0 -Dpackaging=jar -Dfile=/Users/zhan/Desktop/my-jar-alipay-1.0.jar
+
+mvn install:install-file -DgroupId=my-jar -DartifactId=my-jar-logging -Dversion=1.0 -Dpackaging=jar -Dfile=/Users/zhan/Desktop/my-jar-logging-1.0.jar 
 
 
 
