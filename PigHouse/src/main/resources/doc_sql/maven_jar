@@ -18,3 +18,5 @@ mvn install:install-file -DgroupId=my-jar -DartifactId=my-jar-logging -Dversion=
 
 
 BBBBBBINbk1R1z
+
+ssh root@123.206.56.243
